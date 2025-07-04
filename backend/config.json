@@ -1,0 +1,49 @@
+{
+    "Database": {
+        "dbname": "test0",
+        "user": "postgres",
+        "password": "1234",
+        "host": "localhost",
+        "port": "5432",
+        "URI": "postgresql://postgres:1234@localhost:5432/test0"
+    },
+    "Flora": {
+        "URL": "https://epn-library.esrf.fr:443/flora/XAPI",
+        "download_folder": "C:\\Users\\vu-hong\\Desktop\\davies\\data",
+        "USER": "vu-hong",
+        "PASSWORD": "ill03TVH106!",
+        "PUBLICATION_YEAR": 1970,
+
+        "parameters_query":{
+          "method": "publicaccess.query",
+          "sourceName": "doc",
+          "tableName": "PUB_ILL",
+          "queryMode": "standard",
+          "maxMatches": 10000,
+          "query": "[DILL_YEAR|and|{year}]"
+        },
+
+        "parameters_record":{
+          "method": "publicaccess.records",
+          "sourceName": "doc",
+          "tableName": "PUB_ILL"
+        }
+    },
+    "OpenAlex": {
+      "URL": "https://api.openalex.org/works",
+      "download_folder":"C:\\Users\\vu-hong\\Desktop\\davies\\data",
+      "ROR": "https://ror.org/01xtjs520",
+      "email": "vu-hong@ill.fr",
+      "INSTITUTION_ID": "i4210113448",
+      "PUBLICATION_YEAR": 1970,
+      "PER_PAGE": 200, 
+      "query": "Laue Langevin"
+    }, 
+    "Lens": {
+        "URL": "https://www.lens.org/lens/patcite",
+        "download_folder": "C:\\Users\\vu-hong\\Desktop\\davies\\patent",
+        "input_file_path": "C:\\Users\\vu-hong\\Desktop\\ILL_corpus\\Citation_Network\\list_doi.txt",
+        "db_connection_string": "postgresql://postgres:1234@localhost:5432/test0",
+        "output_folder": "C:\\Users\\vu-hong\\Desktop\\davies\\test_data"
+    }
+}
